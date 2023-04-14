@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres:13.3
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: cqrs
+      POSTGRES_PASSWORD: password
+  mongodb:
+    image: mongo:6.0.4
+    volumes:
+      - ./localdev/mongo:/docker-entrypoint-initdb.d
+    ports:
+      - 27017:27017
