@@ -1,7 +1,6 @@
 package ifsantana.inbound.controllers.v1.reapit;
 
 import ifsantana.inbound.commands.reapit.ReapitCommand;
-import ifsantana.inbound.commands.reapit.ReapitCommandResult;
 import ifsantana.inbound.handlers.interfaces.CommandHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
