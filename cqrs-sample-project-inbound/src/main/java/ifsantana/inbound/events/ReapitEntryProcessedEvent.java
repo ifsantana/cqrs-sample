@@ -1,8 +1,6 @@
 package ifsantana.inbound.events;
 
 import ifsantana.inbound.commands.reapit.ReapitCommandResult;
-import lombok.Getter;
-import lombok.Setter;
 
 //@Getter
 //@Setter

@@ -4,8 +4,6 @@ package ifsantana.outbound.models;
 //import org.springframework.data.annotation.Transient;
 //import org.springframework.data.mongodb.core.mapping.Document;
 
-import lombok.AllArgsConstructor;
-
 //@Document(collation = "queries")
 public class QueryModel {
 //  @Transient

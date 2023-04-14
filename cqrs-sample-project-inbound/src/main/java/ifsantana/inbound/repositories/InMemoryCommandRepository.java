@@ -3,9 +3,8 @@ package ifsantana.inbound.repositories;
 import ifsantana.inbound.models.CommandModel;
 import java.util.ArrayList;
 import java.util.List;
-import lombok.experimental.UtilityClass;
+//import lombok.experimental.UtilityClass;
 
-@UtilityClass
 public class InMemoryCommandRepository {
   private static List<CommandModel> commands = new ArrayList<>();
 
