@@ -1,6 +1,8 @@
 package ifsantana.outbound.controllers.v1.facebook;
 
+import ifsantana.outbound.models.QueryModel;
 import ifsantana.outbound.repositories.InMemoryQueryModelRepository;
+import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
