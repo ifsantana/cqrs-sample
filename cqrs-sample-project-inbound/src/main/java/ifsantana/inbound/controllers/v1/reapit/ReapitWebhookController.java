@@ -14,7 +14,7 @@ import static org.springframework.http.ResponseEntity.ok;
 @RestController
 @RequestMapping("/v1/webhooks/reapit")
 public class ReapitWebhookController {
-  private CommandHandler commandHandler;
+  private final CommandHandler commandHandler;
 
   @Autowired
   public ReapitWebhookController(CommandHandler commandHandler) {

@@ -34,7 +34,7 @@ public class CommandModel {
 
 //  @Type(JsonBinaryType.class)
 //  @Column(name = "command_data", columnDefinition = "jsonb", nullable = false)
-  private String command_data;
+  private String commandData;
 
 //  @Column(name = "transaction_date", nullable = false)
   private Instant transactionDate;
@@ -59,7 +59,7 @@ public class CommandModel {
       Instant transactionDate, UUID transactionId) {
     this.id = id;
     this.status = status;
-    this.command_data = command_data;
+    this.commandData = command_data;
     this.transactionDate = transactionDate;
     this.transactionId = transactionId;
   }
@@ -80,12 +80,12 @@ public class CommandModel {
     this.status = status;
   }
 
-  public String getCommand_data() {
-    return command_data;
+  public String getCommandData() {
+    return commandData;
   }
 
-  public void setCommand_data(String command_data) {
-    this.command_data = command_data;
+  public void setCommandData(String commandData) {
+    this.commandData = commandData;
   }
 
   public Instant getTransactionDate() {

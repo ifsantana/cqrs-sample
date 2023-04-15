@@ -4,7 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ifsantana.inbound.bus.InMemoryBus;
 import ifsantana.inbound.commands.reapit.ReapitCommand;
-import ifsantana.inbound.commands.reapit.ReapitCommandResult;
+import ifsantana.inbound.commands.reapit.CommandResult;
 import ifsantana.inbound.events.ReapitEntryProcessedEvent;
 import ifsantana.inbound.handlers.interfaces.CommandHandler;
 import ifsantana.inbound.models.CommandModel;
@@ -17,7 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ReapitCommandHandler implements CommandHandler<ReapitCommandResult, ReapitCommand> {
+public class ReapitCommandHandler implements CommandHandler<CommandResult, ReapitCommand> {
   private ObjectMapper objectMapper;
   private static final Random rand = new Random();
 
@@ -28,12 +28,12 @@ public class ReapitCommandHandler implements CommandHandler<ReapitCommandResult,
     this.objectMapper = new ObjectMapper();
   }
   @Override
-  public ReapitCommandResult handle(ReapitCommand command) {
+  public CommandResult handle(ReapitCommand command) {
     try {
       var model = new CommandModel(rand.nextInt(), TransactionStatus.SUCCESS,
           this.objectMapper.writeValueAsString(command), Instant.now(), UUID.randomUUID());
       InMemoryCommandRepository.addCommandModel(model);
-      var result = new ReapitCommandResult(true, model);
+      var result = new CommandResult(true, model);
       this.inMemoryBus.publishEvent(
           new ReapitEntryProcessedEvent(result)
       );

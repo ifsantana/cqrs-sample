@@ -4,6 +4,9 @@ import ifsantana.inbound.models.CommandModel;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Relational DataModel
+ */
 public class InMemoryCommandRepository {
   private static List<CommandModel> commands = new ArrayList<>();
 

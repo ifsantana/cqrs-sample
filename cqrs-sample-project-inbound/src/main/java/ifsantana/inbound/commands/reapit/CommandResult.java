@@ -1,10 +1,10 @@
 package ifsantana.inbound.commands.reapit;
 
-public class ReapitCommandResult<T> {
+public class CommandResult<T> {
   private Boolean success;
   private T data;
 
-  public ReapitCommandResult(Boolean success, T data) {
+  public CommandResult(Boolean success, T data) {
     this.success = success;
     this.data = data;
   }
