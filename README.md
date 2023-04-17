@@ -17,3 +17,5 @@ Benefits of CQRS include:
 5. Simpler queries. By storing a materialized view in the read database, the application can avoid complex joins when querying.
 6. Technology isolation between modules
 
+It's not mandatory to implement BOTH (commands & queries), the pattern provides
+exactly the benefit to isolate the implementation.
