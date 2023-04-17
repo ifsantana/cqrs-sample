@@ -8,12 +8,14 @@ import ifsantana.outbound.queries.facebook.GetFacebookAdsQueryResult;
 import ifsantana.outbound.queries.facebook.GetFacebookAdsQueryResult.FacebookPropertyDto;
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class GetFacebookQueryResultFactory implements Factory<GetFacebookAdsQueryResult, List<QueryModel>> {
   private final ObjectMapper objectMapper;
 
+  @Autowired
   public GetFacebookQueryResultFactory(ObjectMapper objectMapper) {
     this.objectMapper = objectMapper;
   }

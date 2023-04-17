@@ -1,16 +1,16 @@
 package ifsantana.inbound.commands.reapit;
 
-public class ReapitEventDto {
+public class ReapitEntryDto {
   private String eventId;
   private String entityId;
   private String customerId;
   private String topicId;
   private ReapitPropertyChangeDto old;
 
-  public ReapitEventDto() {
+  public ReapitEntryDto() {
   }
 
-  public ReapitEventDto(String eventId, String entityId, String customerId, String topicId,
+  public ReapitEntryDto(String eventId, String entityId, String customerId, String topicId,
       ReapitPropertyChangeDto old) {
     this.eventId = eventId;
     this.entityId = entityId;

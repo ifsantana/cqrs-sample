@@ -1,4 +1,4 @@
-package ifsantana.outbound.factories;
+package ifsantana.outbound.factories.projections;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -9,11 +9,11 @@ import java.util.Random;
 import org.springframework.stereotype.Service;
 
 @Service
-public class QueryModelFactory implements Factory<QueryModel, ReapitEntryProcessedEvent> {
+public class QueryModelProjectionFactory implements Factory<QueryModel, ReapitEntryProcessedEvent> {
   private final ObjectMapper objectMapper;
   private static final Random rand = new Random ();
 
-  public QueryModelFactory(ObjectMapper objectMapper) {
+  public QueryModelProjectionFactory(ObjectMapper objectMapper) {
     this.objectMapper = objectMapper;
   }
 

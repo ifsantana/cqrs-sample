@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ReapitCommandHandler implements CommandHandler<Object, ReapitCommand> {
-  private ObjectMapper objectMapper;
+  private final ObjectMapper objectMapper;
   private static final Random rand = new Random();
 
   private final InMemoryBus inMemoryBus;
@@ -32,16 +32,16 @@ public class ReapitCommandHandler implements CommandHandler<Object, ReapitComman
   public Object handle(ReapitCommand command) {
     try {
 
-      var model = new CommandModel(rand.nextInt(), TransactionStatus.SUCCESS,
+      var commandModel = new CommandModel(rand.nextInt(), TransactionStatus.SUCCESS,
           this.objectMapper.writeValueAsString(command), Instant.now(), UUID.randomUUID());
 
-      InMemoryCommandRepository.addCommandModel(model);
+      InMemoryCommandRepository.addCommandModel(commandModel);
 
       this.inMemoryBus.publishEvent(
-          new ReapitEntryProcessedEvent(command.getReapitEventDto().getOld())
+          new ReapitEntryProcessedEvent(command.getReapitEntryDto().getOld())
       );
 
-      return new CommandResult<>(true, model);
+      return new CommandResult<>(true, commandModel);
     } catch (JsonProcessingException e) {
       throw new RuntimeException(e);
     }

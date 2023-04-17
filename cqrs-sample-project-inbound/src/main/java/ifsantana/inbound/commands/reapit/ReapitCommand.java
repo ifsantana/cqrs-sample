@@ -3,20 +3,20 @@ package ifsantana.inbound.commands.reapit;
 import ifsantana.inbound.commands.interfaces.Command;
 
 public class ReapitCommand implements Command<Object> {
-  private ReapitEventDto reapitEventDto;
+  private ReapitEntryDto reapitEntryDto;
 
   public ReapitCommand() {
   }
 
-  public ReapitCommand(ReapitEventDto reapitEventDto) {
-    this.reapitEventDto = reapitEventDto;
+  public ReapitCommand(ReapitEntryDto reapitEntryDto) {
+    this.reapitEntryDto = reapitEntryDto;
   }
 
-  public ReapitEventDto getReapitEventDto() {
-    return reapitEventDto;
+  public ReapitEntryDto getReapitEntryDto() {
+    return reapitEntryDto;
   }
 
-  public void setReapitEventDto(ReapitEventDto reapitEventDto) {
-    this.reapitEventDto = reapitEventDto;
+  public void setReapitEntryDto(ReapitEntryDto reapitEntryDto) {
+    this.reapitEntryDto = reapitEntryDto;
   }
 }
