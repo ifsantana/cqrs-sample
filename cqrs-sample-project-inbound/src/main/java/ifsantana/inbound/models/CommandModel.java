@@ -1,17 +1,5 @@
 package ifsantana.inbound.models;
 
-//import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
-//import jakarta.persistence.Column;
-//import jakarta.persistence.Entity;
-//import jakarta.persistence.EnumType;
-//import jakarta.persistence.Enumerated;
-//import jakarta.persistence.GeneratedValue;
-//import jakarta.persistence.GenerationType;
-//import jakarta.persistence.Id;
-//import jakarta.persistence.SequenceGenerator;
-//import jakarta.persistence.Table;
-//import org.hibernate.annotations.TypeDef;
-//import org.hibernate.annotations.Type;
 import java.time.Instant;
 import java.util.UUID;
 
@@ -55,11 +43,11 @@ public class CommandModel {
     }
   }
 
-  public CommandModel(Integer id, TransactionStatus status, String command_data,
+  public CommandModel(Integer id, TransactionStatus status, String commandData,
       Instant transactionDate, UUID transactionId) {
     this.id = id;
     this.status = status;
-    this.commandData = command_data;
+    this.commandData = commandData;
     this.transactionDate = transactionDate;
     this.transactionId = transactionId;
   }

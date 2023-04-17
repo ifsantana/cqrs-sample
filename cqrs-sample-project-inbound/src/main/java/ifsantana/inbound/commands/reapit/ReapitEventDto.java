@@ -61,6 +61,14 @@ public class ReapitEventDto {
 
   public static class ReapitPropertyChangeDto
   {
+    private String id;
+    private Boolean modified;
+    private String marketingConsent;
+    private String mobilePhone;
+    private String email;
+    private String identityCheck;
+    private Boolean active;
+    private ReapitAddressDto primaryAddress;
 
     public ReapitPropertyChangeDto() {
     }
@@ -77,15 +85,6 @@ public class ReapitEventDto {
       this.active = active;
       this.primaryAddress = primaryAddress;
     }
-
-    private String id;
-    private Boolean modified;
-    private String marketingConsent;
-    private String mobilePhone;
-    private String email;
-    private String identityCheck;
-    private Boolean active;
-    private ReapitAddressDto primaryAddress;
 
 
     public String getId() {

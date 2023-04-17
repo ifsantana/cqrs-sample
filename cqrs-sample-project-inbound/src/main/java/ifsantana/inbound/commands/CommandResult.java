@@ -1,4 +1,4 @@
-package ifsantana.inbound.commands.reapit;
+package ifsantana.inbound.commands;
 
 public class CommandResult<T> {
   private Boolean success;

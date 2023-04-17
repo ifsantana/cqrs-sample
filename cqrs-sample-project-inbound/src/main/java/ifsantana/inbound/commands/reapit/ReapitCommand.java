@@ -2,7 +2,7 @@ package ifsantana.inbound.commands.reapit;
 
 import ifsantana.inbound.commands.interfaces.Command;
 
-public class ReapitCommand implements Command<CommandResult> {
+public class ReapitCommand implements Command<Object> {
   private ReapitEventDto reapitEventDto;
 
   public ReapitCommand() {

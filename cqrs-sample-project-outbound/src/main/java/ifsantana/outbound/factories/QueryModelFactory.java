@@ -3,7 +3,7 @@ package ifsantana.outbound.factories;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ifsantana.inbound.events.ReapitEntryProcessedEvent;
-import ifsantana.outbound.factories.interfaces.Factory;
+import ifsantana.inbound.factories.interfaces.Factory;
 import ifsantana.outbound.models.QueryModel;
 import java.util.Random;
 import org.springframework.stereotype.Service;
@@ -20,7 +20,7 @@ public class QueryModelFactory implements Factory<QueryModel, ReapitEntryProcess
   @Override
   public QueryModel create(ReapitEntryProcessedEvent input) {
     try {
-      return new QueryModel(rand.nextInt(), this.objectMapper.writeValueAsString(input.getData()));
+      return new QueryModel(rand.nextInt(), this.objectMapper.writeValueAsString(input.getCommandResult()));
     } catch (JsonProcessingException e) {
       throw new RuntimeException(e);
     }

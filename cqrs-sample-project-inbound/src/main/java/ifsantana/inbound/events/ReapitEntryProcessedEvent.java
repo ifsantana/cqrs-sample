@@ -1,22 +1,19 @@
 package ifsantana.inbound.events;
 
-import ifsantana.inbound.commands.reapit.CommandResult;
 
-//@Getter
-//@Setter
 public class ReapitEntryProcessedEvent extends Event {
-  private CommandResult data;
+  private Object commandResult;
 
-  public ReapitEntryProcessedEvent(CommandResult source) {
+  public ReapitEntryProcessedEvent(Object source) {
     super(source);
-    this.data = source;
+    this.commandResult = source;
   }
 
-  public CommandResult getData() {
-    return data;
+  public Object getCommandResult() {
+    return commandResult;
   }
 
-  public void setData(CommandResult data) {
-    this.data = data;
+  public void setCommandResult(Object commandResult) {
+    this.commandResult = commandResult;
   }
 }

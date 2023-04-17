@@ -1,4 +1,4 @@
-package ifsantana.outbound.handlers.events.interfaces;
+package ifsantana.outbound.handlers.queries.interfaces;
 
 import ifsantana.outbound.queries.interfaces.Query;
 
