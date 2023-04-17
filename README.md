@@ -15,3 +15,5 @@ Benefits of CQRS include:
 3. Security. It’s easier to ensure that only the right domain entities are performing writes on the data.
 4. Separation of concerns. Segregating the read and write sides can result in models that are more maintainable and flexible. Most of the complex business logic goes into the write model. The read model can be relatively simple.
 5. Simpler queries. By storing a materialized view in the read database, the application can avoid complex joins when querying.
+6. Technology isolation between modules
+

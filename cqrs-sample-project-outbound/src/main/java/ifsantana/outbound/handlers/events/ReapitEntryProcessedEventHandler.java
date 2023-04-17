@@ -29,10 +29,10 @@ public class ReapitEntryProcessedEventHandler implements EventHandler<ReapitEntr
   }
 
   private void publishFeedAdEntryProcessedToAdStore(QueryModel model) {
-    var feedAdEntryProcessedEvent = this.adStoreProjectionFactory.create(model);
-
-    // eventBus.publish(feedAdEntryProcessedEvent);
-    // or
-    // httpClient.post(feedAdEntryProcessedEvent.adModel);
+//    var feedAdEntryProcessedEvent = this.adStoreProjectionFactory.create(model);
+//
+//     eventBus.publish(feedAdEntryProcessedEvent);
+//     or
+//     httpClient.post(feedAdEntryProcessedEvent.adModel);
   }
 }
